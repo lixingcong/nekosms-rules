@@ -19,6 +19,7 @@ def print_kw(filename):
 				items[action]=[]
 			
 			items[action].append(filter['body']['pattern'])
+	
 	for key, value in items.iteritems():
 		print 'action: '+key
 		for pattern in value:
@@ -68,7 +69,7 @@ if __name__ == "__main__":
 	print '2 for generate new rules from txt files'
 	mode=raw_input("Enter the number: ")
 	
-	if('2'==mode):
+	if '2' == mode:
 		# To generate nsbak from keyword.txt
 		filter_block=get_filter_from_kw(filename_keyword_block,'block')
 		filter_allow=get_filter_from_kw(filename_keyword_allow,'allow')
